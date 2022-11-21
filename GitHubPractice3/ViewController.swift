@@ -22,12 +22,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func whenButtonPressed(_sender: UIBarButtonItem){
         let alert = UIAlertController(title: "Alert", message: "Pull item from TextField?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {_ in
-            textFieldHandler()
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { UIAlertAction in
+            self.textFieldHandler(UIAlertAction)
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    func textFieldHandler() -> UIAlertAction {
+    
+    func textFieldHandler(_: UIAlertAction) {
         var text = self.textField.text
         blankStringArray.append(text!)
         tableView.reloadData()
