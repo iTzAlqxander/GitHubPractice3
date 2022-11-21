@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     var blankStringArray = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -19,7 +20,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         
     
     }
-
+    func textFieldHandler() -> UIAlertAction {
+        var text = self.textField.text
+        blankStringArray.append(text!)
+        tableView.reloadData()
+        textField.text = ""
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
