@@ -43,12 +43,21 @@
                     <navigationItem key="navigationItem" id="xpr-j3-ShE">
                         <nil key="title"/>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" id="5Gf-Q2-cF0">
+                            <rect key="frame" x="149.33333333333334" y="5" width="94.333333333333343" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Oc-6F-wwf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Oc-6F-wwf">
+                            <connections>
+                                <action selector="whenButtonPressedWith_sender:" destination="BYZ-38-t0r" id="EZG-o1-rSs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="6Qp-np-krc" id="10c-dp-IoH"/>
+                        <outlet property="textField" destination="5Gf-Q2-cF0" id="0lZ-jY-zT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
